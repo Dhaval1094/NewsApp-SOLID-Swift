@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkManager: NetworkServiceProtocol {
+final class NetworkManager: NetworkServiceProtocol {
     func request(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, resp, err in
             if let err = err {
@@ -15,10 +15,14 @@ class NetworkManager: NetworkServiceProtocol {
                 return
             }
             guard let data = data else {
-                completion(.failure(NSError(domain: "No data", code: -1)))
+                completion(.failure(NetworkError.noData))
                 return
             }
             completion(.success(data))
         }.resume()
     }
+}
+
+enum NetworkError: Error {
+    case noData
 }

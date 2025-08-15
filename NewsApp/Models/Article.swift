@@ -14,5 +14,10 @@ struct Article: Identifiable, Decodable {
     let link: String?
     let source_id: String?
     let category: [String]?
-    let image_url: String?    
+    let image_url: String?
+    
+    // This way, id will never be looked for in the API response
+    private enum CodingKeys: String, CodingKey {
+        case title, description, link, source_id, category, image_url
+    }
 }
