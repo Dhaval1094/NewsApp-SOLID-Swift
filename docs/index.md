@@ -202,4 +202,12 @@ struct NewsRowView: View {
 
 Build it once, use it forever — a simple, living example of SOLID in Swift for every project ahead.
 
+---
+
+## ✍️ About the Author  
+
+Hi, I’m **Dhaval Trivedi**, an iOS Developer with 9 years of experience.  
+I enjoy building clean, scalable apps and sharing knowledge about Swift, architecture, and best practices.  
+
+📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/dhaval-trivedi-%EF%A3%BF-779011139/) · 🌐 [GitHub](https://github.com/Dhaval1094)  
 
